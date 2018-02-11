@@ -1,0 +1,35 @@
+%-*- coding: utf-8 -*-
+\documentclass[11pt,a4paper,oneside]{book} %twoside,openright
+\input{0_0_preambule/preambule}
+
+\begin{document}
+\let\cleardoublepage\clearpage
+\frontmatter
+\pagestyle{front}
+\input{0_page-de-couverture/page-de-couverture}
+\thispagestyle{empty}                        % pour la page de garde toute blanche
+
+\mainmatter
+\pagestyle{main}
+\input{1_Evolutions/Evolutions}
+\tableofcontents
+\listoffigures
+\listoftables
+\input{2_Presentation/Presentation}
+\input{3_Documents/Documents}
+\input{4_Terminologie/Terminologie}
+\input{A_AnalyseContextuelle/AnalyseContextuelle}
+\input{B_AnalyseExigences/AnalyseExigences}
+\input{C_AnalyseFonctionnelle/AnalyseFonctionnelle}
+\input{D_ArchitectureTechnique/ArchitectureTechnique}
+%\input{E_Realisation/Realisation}
+
+\appendix
+\newcommand{\annexe}[1]{%
+	\refstepcounter{chapter}%
+	\phantomsection%
+	\addcontentsline{toc}{chapter}{\appendixname~{\thechapter}: #1}%
+	\chapter*{\appendixname~{\thechapter}: #1}}
+\input{Z_Annexes/AnnexeA}
+\label{LastPage}
+\end{document}
