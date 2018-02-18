@@ -1,7 +1,10 @@
 %-*- coding: utf-8 -*-
 \documentclass{beamer}
-
-\usepackage[frenchb]{babel}
+% https://en.wikibooks.org/wiki/LaTeX/Internationalization
+\usepackage[english,frenchb]{babel}
+\babeltags{en = english}
+\babeltags{fr = frenchb}
+\usepackage{comment}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \graphicspath{{images/}}
@@ -11,9 +14,9 @@
 \usetheme{Warsaw}
 \setbeamertemplate{headline}{} % Supprime la zone de menu en haut (prend trop de place !)
 
-\title{Projet Arrosage}
+\title{Projet Smart Water}
 %\subtitle{Sous-titre}
-\author{S HADJOUTRIOS, J GARCIA, E IGUAL, JF BENITEZ} % Si on met les noms en majuscules, il y en a un de tronqué en bas dans le pied de page.
+\author{S Hadjoutrios, J Garcia, E Igual, JF Benitez, N Symphorien} % Si on met les noms en majuscules, il y en a un de tronqué en bas dans le pied de page.
 \institute{CNAM}
 \date{21/02/2018}
 
@@ -25,10 +28,10 @@
   \titlepage
 \end{frame}
 
-\begin{frame}
-  \frametitle{Sommaire}
-  \tableofcontents
-\end{frame}
+%\begin{frame}
+%  \frametitle{Sommaire}
+%  \tableofcontents
+%\end{frame}
 
 \section{Finalité}
 \begin{frame}[label=finalite]
